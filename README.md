@@ -154,26 +154,6 @@ If PiD output is warped or distorted with Z-Image / Flux, confirm `PiD Decode` u
 
 If `PiD Decode`, `PiD Prepare`, `PiD Sample`, or `PiD Finalize` are missing, install the separate `ComfyUI-PiD` node pack. EmberFrame Nodes only provides helper nodes and does not bundle NVIDIA PiD.
 
-## Public Sharing Checklist
-
-Good things to publish:
-
-- this custom node code
-- README / install notes
-- sanitized example screenshots
-- sanitized example workflow JSON
-
-Do not publish:
-
-- downloaded PiD checkpoints
-- Z-Image / Flux checkpoints
-- `.safetensors`, `.ckpt`, `.pth`, `.pt`, `.gguf`, or model folders
-- generated images if they contain private metadata or prompts
-- workflow JSON containing private prompts, personal file paths, API keys, private model paths, or paid/private model names
-- your full Comfy portable folder
-
-Before publishing, review wildcard text files and workflow prompts. Remove anything you do not want to make public.
-
 ## License Notes
 
 This pack is GPL-3.0 because the sampler-capture node mirrors behavior from Comfy's GPL-3.0 sampler implementation.
