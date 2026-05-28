@@ -1,0 +1,10 @@
+eye-level camera angle
+low-angle view
+high-angle view
+three-quarter view
+over-the-shoulder view
+wide establishing shot
+medium shot
+close-up composition
+profile view
+top-down view

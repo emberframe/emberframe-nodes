@@ -1,5 +1,6 @@
 .git/
 .github/
+.gitignore
 __pycache__/
 *.py[cod]
 *.pyo

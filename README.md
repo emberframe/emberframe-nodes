@@ -18,12 +18,11 @@ The first release includes the helper nodes created for the advanced Z-Image Bas
 - `EmberFrame Wildcard Prompt Assembler`
 - `EmberFrame MP Aspect Resolution Selector`
 
-The pack also includes the small wildcard text files directly referenced by the example workflow:
+The pack also includes three small example wildcard text files for testing the prompt nodes:
 
-- `framing_wildcard.txt`
-- `camera_angle_wildcard.txt`
-- `lingerie.txt`
-- `Prompt_Civit_connoisseur34_07.txt`
+- `example_camera_angles.txt`
+- `example_lighting_styles.txt`
+- `example_scene_moods.txt`
 
 ## What This Does Not Include
 
@@ -137,6 +136,16 @@ capture_debug = true
 ```
 
 If you feed `output`, `denoised_output`, or `capture_tensor_source = final_latent` into PiD, normalize it first with `EmberFrame Normalize ZImage/Flux Latent`. If you feed callback `x` directly, test before adding normalization, because callback `x` is already in the sampler/model latent space.
+
+## Troubleshooting
+
+If the EmberFrame nodes do not appear, restart Comfy and confirm this folder is inside `ComfyUI/custom_nodes/`.
+
+If wildcard dropdowns are empty, confirm the `wildcards/` folder was copied with the node pack. The included wildcard files are exposed with a stable `emberframe-nodes:` prefix even if the installed folder is renamed.
+
+If PiD output is warped or distorted with Z-Image / Flux, confirm `PiD Decode` uses `scale = 4`. The `2k` and `2kto4k` PiD checkpoints are both 4x decoders.
+
+If `PiD Decode`, `PiD Prepare`, `PiD Sample`, or `PiD Finalize` are missing, install the separate `ComfyUI-PiD` node pack. EmberFrame Nodes only provides helper nodes and does not bundle NVIDIA PiD.
 
 ## Public Sharing Checklist
 

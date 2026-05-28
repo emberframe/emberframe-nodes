@@ -579,6 +579,7 @@ class PiDAdvancedLatentCaptureInspector:
 
 WILDCARD_PLACEHOLDERS = ("{wildcard}", "{{wildcard}}", "__WILDCARD__")
 WILDCARD_VALID_MODES = {"fixed", "next", "previous", "randomize", "increment", "decrement"}
+LOCAL_WILDCARD_LABEL = "emberframe-nodes"
 
 
 @dataclass(frozen=True)
@@ -664,11 +665,13 @@ class EmberFrameWildcardBase:
     @classmethod
     def _discover_wildcard_files(cls) -> Dict[str, Path]:
         roots = cls._candidate_wildcard_roots()
+        local_wildcards = (Path(__file__).resolve().parent / "wildcards").resolve()
         discovered: Dict[str, Path] = {}
         for root in roots:
             if not root.exists() or not root.is_dir():
                 continue
-            root_label = cls._label_for_root(root)
+            root_resolved = root.resolve()
+            root_label = LOCAL_WILDCARD_LABEL if root_resolved == local_wildcards else cls._label_for_root(root)
             for path in sorted(root.rglob("*.txt"), key=lambda p: str(p).lower()):
                 try:
                     rel = path.relative_to(root).as_posix()
