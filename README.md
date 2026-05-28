@@ -46,6 +46,13 @@ Copy or clone this folder into:
 ComfyUI/custom_nodes/emberframe-nodes
 ```
 
+Git clone install:
+
+```bash
+cd ComfyUI/custom_nodes
+git clone https://github.com/emberframe/emberframe-nodes.git
+```
+
 Restart Comfy. The new nodes appear under:
 
 ```text
