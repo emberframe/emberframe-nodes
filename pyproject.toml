@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emberframe-nodes"
+description = "A growing collection of EmberFrame utility nodes for Comfy, including advanced PiD sampling, Z-Image/Flux latent normalization, wildcard prompt helpers, and resolution tools."
+version = "1.0.0"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/emberframe/emberframe-nodes"
+"Bug Tracker" = "https://github.com/emberframe/emberframe-nodes/issues"
+
+[tool.comfy]
+PublisherId = "emberframe"
+DisplayName = "EmberFrame Nodes"
+Icon = ""
