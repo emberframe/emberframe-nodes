@@ -2,7 +2,7 @@
 
 `emberframe-nodes` is a growing collection of lightweight custom nodes for Comfy workflows.
 
-Version: `1.0.0`
+Version: `1.0.1`
 
 The first release includes the helper nodes created for the advanced Z-Image Base / Z-Image Turbo PiD workflow, but the package name is intentionally broad so more EmberFrame nodes can be added later.
 
