@@ -67,7 +67,7 @@ Sanitized Z-Image example workflows are included:
 
 ```text
 workflows/z-image_5.4_emberframe.json
-workflows/z-image_5.1_emberframe_dual_stage_no_pid.json
+workflows/z-image_5.4_emberframe_PiD_Experimental.json
 ```
 
 See `WORKFLOW.md` before running them. The workflows use placeholder model names, blank disabled LoRA slots, public-safe example prompts, and the bundled example wildcard files.

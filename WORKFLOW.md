@@ -4,11 +4,11 @@ This repository includes sanitized example workflows:
 
 ```text
 workflows/z-image_5.4_emberframe.json
-workflows/z-image_5.1_emberframe_dual_stage_no_pid.json
+workflows/z-image_5.4_emberframe_PiD_Experimental.json
 ```
 
-- `z-image_5.4_emberframe.json` demonstrates a Z-Image Base / Z-Image Turbo split-sigma sampling chain using EmberFrame helper nodes and PiD final-latent decode.
-- `z-image_5.1_emberframe_dual_stage_no_pid.json` demonstrates the original non-PiD Z-Image Base / Z-Image Turbo split-sigma workflow using EmberFrame prompt and resolution helper nodes.
+- `z-image_5.4_emberframe.json` demonstrates the base non-PiD Z-Image Base / Z-Image Turbo split-sigma workflow using EmberFrame prompt and resolution helper nodes.
+- `z-image_5.4_emberframe_PiD_Experimental.json` demonstrates an experimental PiD final-latent decode branch added to the same split-sigma Z-Image workflow.
 
 ## What Was Sanitized
 
