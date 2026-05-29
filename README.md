@@ -2,7 +2,7 @@
 
 `emberframe-nodes` is a growing collection of lightweight custom nodes for Comfy workflows.
 
-Version: `1.0.1`
+Version: `1.0.2`
 
 The first release includes the helper nodes created for the advanced Z-Image Base / Z-Image Turbo PiD workflow, but the package name is intentionally broad so more EmberFrame nodes can be added later.
 
@@ -66,9 +66,16 @@ EmberFrame/Resolution
 Sanitized Z-Image example workflows are included:
 
 ```text
-workflows/z-image_5.4_emberframe.json
-workflows/z-image_5.4_emberframe_PiD_Experimental.json
+workflows/z-image_5.0_emberframe.json
+workflows/z-image_5.0_emberframe_pid.json
+workflows/z-image_5.1_emberframe_pid.json
+workflows/z-image_5.2_emberframe_pid.json
 ```
+
+- `z-image_5.0_emberframe.json` is the standard non-PiD Z-Image Base / Z-Image Turbo split-sigma workflow.
+- `z-image_5.0_emberframe_pid.json` is the PiD workflow previously shared locally as `v2.0`.
+- `z-image_5.1_emberframe_pid.json` is the PiD workflow previously shared locally as `v2.1`, with the Impact detailer pass.
+- `z-image_5.2_emberframe_pid.json` is the PiD workflow previously shared locally as `v2.2`, with the SAM3 detailer pass.
 
 See `WORKFLOW.md` before running them. The workflows use placeholder model names, blank disabled LoRA slots, public-safe example prompts, and the bundled example wildcard files.
 

@@ -3,12 +3,16 @@
 This repository includes sanitized example workflows:
 
 ```text
-workflows/z-image_5.4_emberframe.json
-workflows/z-image_5.4_emberframe_PiD_Experimental.json
+workflows/z-image_5.0_emberframe.json
+workflows/z-image_5.0_emberframe_pid.json
+workflows/z-image_5.1_emberframe_pid.json
+workflows/z-image_5.2_emberframe_pid.json
 ```
 
-- `z-image_5.4_emberframe.json` demonstrates the base non-PiD Z-Image Base / Z-Image Turbo split-sigma workflow using EmberFrame prompt and resolution helper nodes.
-- `z-image_5.4_emberframe_PiD_Experimental.json` demonstrates an experimental PiD final-latent decode branch added to the same split-sigma Z-Image workflow.
+- `z-image_5.0_emberframe.json` demonstrates the base non-PiD Z-Image Base / Z-Image Turbo split-sigma workflow using EmberFrame prompt and resolution helper nodes.
+- `z-image_5.0_emberframe_pid.json` maps to the previous local PiD `v2.0` workflow.
+- `z-image_5.1_emberframe_pid.json` maps to the previous local PiD `v2.1` workflow and includes the Impact detailer pass.
+- `z-image_5.2_emberframe_pid.json` maps to the previous local PiD `v2.2` workflow and includes the SAM3 detailer pass.
 
 ## What Was Sanitized
 
@@ -29,6 +33,8 @@ After loading the workflow in ComfyUI, set these to your local files:
 - VAE
 - CLIP/text encoder
 - PiD checkpoints
+- optional Impact detailer detector files for `z-image_5.1_emberframe_pid.json`
+- optional SAM3 model access for `z-image_5.2_emberframe_pid.json`
 - optional ControlNet, depth, upscaler, and SeedVR2 models if you use those sections
 
 If you use the img2img path, replace the placeholder `example_input.png` with your own image.
@@ -40,10 +46,17 @@ The workflow still needs external packs such as:
 - `ComfyUI-PiD`
 - `rgthree-comfy`
 - `ComfyUI-Image-Saver`
+- `ComfyUI-Impact-Pack`
+- `ComfyUI-LG_SamplingUtils`
+- `ComfyUI_essentials`
 - `ComfyUI-Easy-Use`
+- `ComfyUI-Impact-Subpack` for the 5.1 Impact detailer pass
+- `ComfyUI-TBG-SAM3` for the 5.2 SAM3 detailer pass
 - `ComfyUI-KJNodes`
 - `RES4LYF`
 - ControlNet/depth helper nodes used by the optional sections
+- `WAS Node Suite - Revised`
+- `comfyui-vrgamedevgirl` for the Film Grain and Sharpen nodes
 - SeedVR2 / Ultimate SD Upscale packs used by the optional upscaling sections
 
 Install `emberframe-nodes` once for the EmberFrame helper nodes used by the main sampling and prompt-helper sections.

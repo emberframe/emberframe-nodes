@@ -61,3 +61,9 @@ capture_debug = true
 ```
 
 For Z-Image / Flux PiD, keep PiD scale at `4`.
+
+## Detailer File Notes
+
+`z-image_5.1_emberframe_pid.json` uses the Impact detailer pass. Its workflow note lists the detector files and links for `person_yolov8m-seg.pt`, `face_yolov8m.pt`, `Eyes.pt`, and `sam_vit_l_0b3195.pth`.
+
+`z-image_5.2_emberframe_pid.json` uses the SAM3 detailer pass. Its workflow note links the required `models/sam3/sam3.pt` file to the gated `facebook/sam3` Hugging Face repo and notes that ComfyUI needs authenticated access if auto-download is used.
