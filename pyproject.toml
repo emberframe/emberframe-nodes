@@ -8,6 +8,7 @@ description = "A growing collection of EmberFrame utility nodes for Comfy, inclu
 version = "1.0.0"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
+dependencies = []
 classifiers = [
     "Operating System :: OS Independent",
 ]
