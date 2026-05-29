@@ -37,4 +37,6 @@ logs/
 *.jpeg
 *.webp
 *.json
+!workflows/
+!workflows/*.json
 !example_workflow_notes.md

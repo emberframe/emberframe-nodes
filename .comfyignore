@@ -38,3 +38,5 @@ logs/
 *.jpeg
 *.webp
 *.json
+!workflows/
+!workflows/*.json

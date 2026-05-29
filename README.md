@@ -61,6 +61,16 @@ EmberFrame/Prompt
 EmberFrame/Resolution
 ```
 
+## Example Workflow
+
+A sanitized Z-Image / PiD example workflow is included:
+
+```text
+workflows/z-image_5.4_emberframe.json
+```
+
+See `WORKFLOW.md` before running it. The workflow uses placeholder model names, blank disabled LoRA slots, public-safe example prompts, and the bundled example wildcard files.
+
 ## Z-Image / Flux PiD Scale Rule
 
 For Z-Image / Flux PiD, treat PiD as a 4x decoder:
